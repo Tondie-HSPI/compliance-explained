@@ -42,7 +42,7 @@ Identifies key insurance requirements such as:
 - Status: `met`, `missing`, or `needs_review`  
 - Includes confidence scoring and reasoning  
 
-### 🤖 Decision Support
+### Decision Support
 - Highlights missing requirements  
 - Suggests next steps  
 - Provides source-backed explanations  
@@ -78,7 +78,7 @@ Upload → Parse → Extract → Structure → Store → Retrieve → Explain
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. User uploads a document  
 2. System extracts text and structure  
@@ -173,15 +173,4 @@ It does not provide legal or insurance advice.
 Built by someone who believes AI should make complex systems easier to navigate — not harder to trust.
 
 ```
-
----
-
-# WHAT YOU FIXED
-
-- ✅ Closed broken code blocks  
-- ✅ Cleaned roadmap formatting  
-- ✅ Fixed project structure display  
-- ✅ Made everything render correctly  
-
----
 
