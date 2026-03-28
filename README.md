@@ -106,15 +106,14 @@ Upload → Parse → Extract → Structure → Store → Retrieve → Explain
 ## Project Structure
 
 
-
+```
 /frontend → Next.js app
 /backend → FastAPI app
 ├── main.py
 ├── extract.py
 ├── schema.py
 └── prompts.py
-
-
+```
 
 ---
 
