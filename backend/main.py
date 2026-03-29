@@ -225,15 +225,13 @@ def calculate_risk(requirements: list[dict]) -> dict:
 # ---------------------------------------------------------------------------
 
 def determine_escalation(requirements: list[dict]) -> str | None:
-    critical_missing = {req["type"] for req in requirements if req.get("status") == "missing"}
-    low_confidence = any(
-        req.get("confidence", 100) < CONFIDENCE_ESCALATION_THRESHOLD
-        for req in requirements
-    )
-    if critical_missing or low_confidence:
-        return "human_review_required"
-    return None
+    CRITICAL_TYPES = {"General Liability", "Workers Comp"}
 
+    critical_missing = {
+        req["type"]
+        for req in requirements
+        if req.get("status") == "missing" and req["type"] in CRITICAL_TYPES
+    }
 
 # ---------------------------------------------------------------------------
 # Core: validate_requirements
@@ -254,7 +252,7 @@ def validate_requirements(requirements: list[dict]) -> list[dict]:
             flags.append("Low confidence — human review recommended")
             req["status"] = "needs_review"
 
-        if req.get("limit") in ("not specified", None, ""):
+        if str(req.get("limit", "")).lower() in ("not specified", "", "none"):
             flags.append("Limit not specified in document")
             if req["status"] == "met":
                 req["status"] = "needs_review"
