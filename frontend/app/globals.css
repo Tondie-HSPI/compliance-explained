@@ -1,0 +1,294 @@
+﻿body {
+  margin: 0;
+  background: #f5efe5;
+  color: #241b38;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  margin: 8px 0 16px;
+  max-width: 11ch;
+}
+
+.eyebrow,
+.summary span,
+.index-head,
+.index-row summary span,
+.controls span {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #0b6e4f;
+  margin: 0;
+}
+
+.lead,
+.controls,
+.document-row p,
+.citation,
+.muted,
+.error-text {
+  color: #5d5469;
+  line-height: 1.6;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.controls,
+.summary div,
+.index {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(36, 27, 56, 0.1);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.controls {
+  margin: 28px 0;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controls span {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6a6178;
+}
+
+select,
+input[type="file"] {
+  border: 1px solid rgba(36, 27, 56, 0.12);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: white;
+}
+
+.upload-box {
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px dashed rgba(11, 110, 79, 0.35);
+  border-radius: 16px;
+  background: rgba(11, 110, 79, 0.04);
+}
+
+.upload-box strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #241b38;
+}
+
+.document-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.document-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid rgba(36, 27, 56, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.document-row p {
+  margin: 4px 0 0;
+}
+
+.inline-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.inline-select select {
+  min-width: 180px;
+}
+
+.document-row button,
+.analyze-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.document-row button {
+  background: transparent;
+  color: #c76431;
+  font-weight: 700;
+}
+
+.analyze-button {
+  margin-top: 16px;
+  border-radius: 999px;
+  padding: 14px 20px;
+  background: #241b38;
+  color: white;
+}
+
+.analyze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #b3261e;
+  margin-top: 12px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.summary span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  color: #6a6178;
+  margin-bottom: 6px;
+}
+
+.summary strong {
+  font-size: 1.25rem;
+}
+
+.review-details {
+  margin: -8px 0 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(36, 27, 56, 0.08);
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #5d5469;
+}
+
+.review-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #241b38;
+}
+
+.review-details-body {
+  padding-top: 12px;
+}
+
+.review-details-body p {
+  margin: 0 0 8px;
+}
+
+.index-head,
+.index-row summary {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 0.9fr 1.8fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.index-head {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6a6178;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(36, 27, 56, 0.1);
+}
+
+.index-head.comparison,
+.index-row summary.comparison {
+  grid-template-columns: 0.6fr 1fr 1fr 0.8fr 1.5fr;
+}
+
+.index-row {
+  border-bottom: 1px solid rgba(36, 27, 56, 0.08);
+}
+
+.index-row:last-child {
+  border-bottom: 0;
+}
+
+.index-row summary {
+  list-style: none;
+  padding: 14px 0;
+  cursor: pointer;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.cell-line {
+  display: block;
+  line-height: 1.45;
+}
+
+.state-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.state-chip.good {
+  color: #0b6e4f;
+}
+
+.state-chip.warn {
+  color: #9a6a00;
+}
+
+.state-chip.bad {
+  color: #b3261e;
+}
+
+.citation {
+  padding: 0 0 14px;
+}
+
+.citation p {
+  margin: 0 0 8px;
+}
+
+.empty-index {
+  padding-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .control-grid,
+  .summary,
+  .index-head,
+  .index-row summary {
+    grid-template-columns: 1fr;
+  }
+}
