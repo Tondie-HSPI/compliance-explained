@@ -169,7 +169,7 @@ It does not provide legal or insurance advice.
 
 ## Author
 
-Built by someone who believes AI should make complex systems easier to navigate — not harder to trust.
+Built by someone who believes AI should make complex systems easier to navigate not harder to trust.
 
 ```
 
